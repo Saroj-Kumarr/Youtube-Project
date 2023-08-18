@@ -5,20 +5,34 @@ import {
   MdMore,
   MdSubscriptions,
   MdVideoLibrary,
+  MdLocalMovies,
+  MdSportsBaseball,
+  MdWorkspacePremium,
+  MdFeedback,
 } from "react-icons/md";
 import { PiYoutubeLogoDuotone } from "react-icons/pi";
 import { TbHistory } from "react-icons/tb";
 import { useSelector } from "react-redux";
+import { HiTrendingUp } from "react-icons/hi";
+import { FaBagShopping, FaRadio } from "react-icons/fa6";
+import {
+  BiSolidBookAdd,
+  BiSolidReport,
+  BiSolidHelpCircle,
+} from "react-icons/bi";
+
+import { ImMusic } from "react-icons/im";
+import { RiLiveFill } from "react-icons/ri";
+import { IoGameController } from "react-icons/io5";
+import { GiClothes } from "react-icons/gi";
+import { BsFillFileMusicFill, BsSearch } from "react-icons/bs";
 
 function Sidebar() {
-
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
   if (!isMenuOpen) {
     return null;
   }
-
-
 
   return (
     <div>
@@ -49,24 +63,44 @@ function Sidebar() {
         <MdExplore className="inline-block relative bottom-[2px]" /> Explore
       </h1>
       <ul className="font-semibold">
-        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">
+        <li className="m-1 hover:bg-gray-200 w-24 hover:rounded-md">
+          <HiTrendingUp className="text-lg inline-block relative bottom-[2px] mr-1" />
           Trending
         </li>
-        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md ">
+        <li className="m-1 hover:bg-gray-200 w-24 hover:rounded-md ">
+          <FaBagShopping className="inline-block left-[2px] relative bottom-[2px] right-[2px] mr-1" />
           Shopping
         </li>
-        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">Music</li>
-        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">Movies</li>
-        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">Live</li>
-        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">Gaming</li>
-        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">News</li>
-        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">Sports</li>
         <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">
+          <ImMusic className="inline-block relative bottom-[2px] mr-1" /> Music
+        </li>
+        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">
+          <MdLocalMovies className="inline-block relative bottom-[2px] mr-1" />
+          Movies
+        </li>
+        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">
+          <RiLiveFill className="inline-block relative bottom-[2px] mr-1" />{" "}
+          Live
+        </li>
+        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">
+          <IoGameController className="inline-block relative bottom-[2px] mr-1" />
+          Gaming
+        </li>
+        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">
+          <FaRadio className="inline-block relative bottom-[2px] mr-1" /> News
+        </li>
+        <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">
+          <MdSportsBaseball className="inline-block relative bottom-[2px] mr-2" />
+          Sports
+        </li>
+        <li className="m-1 hover:bg-gray-200 w-24 hover:rounded-md">
+          <BiSolidBookAdd className="inline-block relative bottom-[2px] mr-2" />
           Learning
         </li>
 
-        <li className="m-1 hover:bg-gray-200 w-36 hover:rounded-md">
-          Fashion & Beauty
+        <li className="m-1 hover:bg-gray-200 w-40 hover:rounded-md">
+          <GiClothes className="inline-block relative bottom-[2px]" /> Fashion &
+          Beauty
         </li>
       </ul>
       <hr className="border-gray-400 w-36 my-2" />
@@ -75,13 +109,16 @@ function Sidebar() {
         More from YouTube
       </h1>
       <ul className="font-semibold">
-        <li className="m-1 hover:bg-gray-200 w-36 hover:rounded-md">
+        <li className="m-1 hover:bg-gray-200 w-40 hover:rounded-md">
+          <MdWorkspacePremium className="inline-block relative bottom-[3px] mr-1" />
           YouTube Premium
         </li>
         <li className="m-1 hover:bg-gray-200 w-36 hover:rounded-md">
+          <BsFillFileMusicFill className="inline-block relative bottom-[3px] mr-1" />
           YouTube Music
         </li>
         <li className="m-1 hover:bg-gray-200 w-36 hover:rounded-md">
+          <PiYoutubeLogoDuotone className="inline-block relative bottom-[3px] mr-1" />
           YouTube Kids
         </li>
       </ul>
@@ -92,10 +129,15 @@ function Sidebar() {
       </h1>
       <ul className="font-semibold">
         <li className="m-1 hover:bg-gray-200 w-36 hover:rounded-md">
+          <BiSolidReport className="inline-block relative bottom-[2px] mr-1" />
           Report history
         </li>
-        <li className="m-1 hover:bg-gray-200 w-36 hover:rounded-md">Help</li>
         <li className="m-1 hover:bg-gray-200 w-36 hover:rounded-md">
+          <BiSolidHelpCircle className="inline-block relative bottom-[2px] mr-1" />
+          Help
+        </li>
+        <li className="m-1 hover:bg-gray-200 w-36 hover:rounded-md">
+          <MdFeedback className="inline-block relative bottom-[2px] mr-1" />
           Send feedback
         </li>
       </ul>

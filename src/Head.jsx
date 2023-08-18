@@ -4,6 +4,8 @@ import ytlogo from "./ytlogonext.jpg";
 import user from "./user.png";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "./appSlice";
+import { BsSearch } from "react-icons/bs";
+import { IoMicCircleSharp } from "react-icons/io5";
 
 function Head() {
   const dispatch = useDispatch();
@@ -23,14 +25,17 @@ function Head() {
         />
         <img className="h-12 ml-2" src={ytlogo} alt="yt-logo" />
       </div>
-      <div>
+      <div className="relative right-14">
         <input
-          className="border-2 rounded-l-2xl p-1 mr-2 w-[600px] border-gray-400 w-12 focus:outline-none"
+          className="border-2 focus:border-blue-500 rounded-l-2xl p-1 mr-2 w-[600px] border-gray-400 w-12 focus:outline-none"
           type="text"
           placeholder="Search"
         />
-        <button className="border-2 rounded-r-xl relative right-2 p-1 border-gray-400 w-16 bg-gray-400">
-          Search
+        <button className="border-2 rounded-r-2xl relative right-2 p-[2.5px] bottom-[2px] border-gray-400 w-16 bg-gray-400">
+          <BsSearch className="inline-block text-2xl" />
+        </button>
+        <button className="">
+          <IoMicCircleSharp className="inline-block relative bottom-1 text-4xl text-gray-600" />
         </button>
       </div>
       <div>
