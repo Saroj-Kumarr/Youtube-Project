@@ -31,7 +31,7 @@ function Head() {
           type="text"
           placeholder="Search"
         />
-        <button className="border-2 rounded-r-2xl relative right-2 p-[2.5px] bottom-[2px] border-gray-400 w-16 bg-gray-400">
+        <button className="border-2 rounded-r-2xl relative right-2 p-[3px] bottom-[2px] border-gray-400 w-16 bg-gray-400">
           <BsSearch className="inline-block text-2xl" />
         </button>
         <button className="">
@@ -46,3 +46,6 @@ function Head() {
 }
 
 export default Head;
+
+
+// https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=[YOUR_API_KEY]

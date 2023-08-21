@@ -26,6 +26,7 @@ import { RiLiveFill } from "react-icons/ri";
 import { IoGameController } from "react-icons/io5";
 import { GiClothes } from "react-icons/gi";
 import { BsFillFileMusicFill, BsSearch } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -36,9 +37,11 @@ function Sidebar() {
 
   return (
     <div>
-      <h1 className="text-md mt-2 p-1 font-extrabold bg-gray-300 rounded-md w-24 hover:bg-gray-400 duration-300">
-        <AiFillHome className="inline-block relative bottom-[3px]" /> Home
-      </h1>
+      <Link to="/">
+        <h1 className="text-md mt-2 p-1 font-extrabold bg-gray-300 rounded-md w-24 hover:bg-gray-400 duration-300">
+          <AiFillHome className="inline-block relative bottom-[3px]" /> Home
+        </h1>
+      </Link>
       <ul className="font-semibold">
         <li className="m-1 hover:bg-gray-200 w-20 hover:rounded-md">
           <PiYoutubeLogoDuotone className="inline-block relative bottom-[2px] mr-1 " />
