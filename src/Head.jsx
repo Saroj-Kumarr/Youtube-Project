@@ -11,7 +11,7 @@ import { useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
 function Head() {
-  const [searchText, setSearchText] = useState();
+  const [searchText, setSearchText] = useState([]);
   const [suggestion, setSuggestion] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
 
