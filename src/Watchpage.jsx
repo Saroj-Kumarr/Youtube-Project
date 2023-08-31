@@ -4,6 +4,7 @@ import { closeMenu } from "./appSlice";
 import { useSearchParams } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CommentContainer from "./CommentContainer";
+import Subscribe from "./Subscribe";
 
 function Watchpage() {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function Watchpage() {
           allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
+        {/* <div><Subscribe/></div> */}
       </div>
       <div>
         <CommentContainer />
@@ -35,3 +37,4 @@ function Watchpage() {
 }
 
 export default Watchpage;
+

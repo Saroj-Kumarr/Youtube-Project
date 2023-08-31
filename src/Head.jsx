@@ -50,7 +50,7 @@ function Head() {
       <div className="relative right-14">
         <div>
           <input
-            className="border-2 focus:border-blue-500 rounded-l-2xl p-1 mr-2 w-[600px] border-gray-400 w-12 focus:outline-none"
+            className="border-2 focus:border-blue-500 rounded-l-2xl p-1 mr-2 w-[600px] border-gray-400 focus:outline-none"
             type="text"
             placeholder="Search"
             value={searchText}
